@@ -1,0 +1,119 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    /* background:radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+}
+#main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#main {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centering the score content vertically and horizontally */
+    height: 100%; 
+}
+
+/* Scoreboard small size on the right */
+#scoreboard {
+    width: 25%; /* Reduced size */
+    height: 25%;
+    padding: 10px; /* Reduced padding */
+    background:radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%; /* Move it down to center vertically */
+    transform: translateY(-50%); /* Adjusts to exactly center the element on the Y-axis */
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 20px; /* Slightly smaller title */
+}
+
+p {
+    font-size: 16px; /* Slightly smaller text */
+}
+
+/* Card styling remains the same */
+.card {
+    height: 420px;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.card img {
+    width: 90%;
+}
+
+/* Button styling */
+#switch-player {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background:radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#switch-player:hover {
+    background-color: #FFAA00;
+}
+
+#switch-player:active {
+    background-color: #FF8800;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #main {
+        width: 100%;
+    }
+    #scoreboard {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-left: none;
+        border-top: 2px solid black;
+        margin-top: 20px;
+        transform: none; /* Remove Y-axis centering for smaller screens */
+    }
+    #switch-player {
+        width: 90%;
+        font-size: 14px;
+    }
+}
